@@ -1,0 +1,45 @@
+.breadcrumb
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: left
+    align-items: center
+    margin: 0
+    padding: 0
+    background-color: transparent
+    
+    a
+        position: relative
+        display: flex
+        align-items: center
+        height: 18px
+        margin-right: 10px
+        font-family: $SourceSansPro
+        font-size: 14px
+        color: $color_main_text
+        
+        &:after
+            content: ""
+            position: absolute
+            right: -15px
+            top: 7px
+            width: 5px
+            height: 5px
+            margin-right: 5px
+            +border-radius(100%)
+            background-color: $color_border
+    
+    a:first-child
+        width: 22px
+        height: 18px
+        background-image: url('../images/icons/icon-home.svg')
+        +background-footer-icons-options(18px)
+        &:after
+            right: -10px
+    
+    span
+        margin-left: 5px
+        font-family: $SourceSansPro
+        font-size: 14px
+        color: $color_main_text
+            

@@ -1,0 +1,70 @@
+.collection
+    display: flex
+
+    padding: 35px
+    background-color: $color_white
+
+    &__block
+        position: relative
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+        max-width: 350px
+        &:first-child
+            &:after
+                content: ""
+                position: absolute
+                top: calc( 50% - 25px )
+                right: -75px
+                display: block
+                width: 50px
+                height: 50px
+                background: transparent url('../images/icons/icon-plus.svg') no-repeat center center
+                background-size: contain 
+        &:nth-child(2)
+            margin-left: 100px
+            &:after
+                content: ""
+                position: absolute
+                top: calc( 50% - 25px )
+                right: -75px
+                display: block
+                width: 50px
+                height: 50px
+                +background-cover-options(center center)
+                background: transparent url('../images/icons/icon-equally.svg') no-repeat center center
+                background-size: contain 
+
+    &__image
+        flex: 1 1 160px
+        width: 160px
+        height: 160px
+        +background-cover-options(center center)
+
+    &__info
+        flex: 1 1 calc( 100% - 160px )
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        padding-left: 15px
+    
+    &__title
+        font-family: $SourceSansPro
+        font-size: 14px
+        line-height: 21px
+        color: $color_main_text
+
+    &__price    
+        display: flex
+        margin-top: 10px
+        font-family: $SourceSansPro
+        font-size: 26px
+        font-weight: 600
+        .old-price
+            margin-right: 10px
+            color: $color_fourth_text
+            text-decoration: line-through
+        .price
+            color: $color_crimson

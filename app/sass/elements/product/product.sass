@@ -1,0 +1,277 @@
+.products
+    display: flex
+    justify-content: space-between
+
+.product
+    width: 270px
+    padding: 15px 30px 20px
+    background-color: $color_white
+    border: 1px solid #f0f0f0
+    cursor: pointer
+    &:hover
+        border: 1px solid $color_gray
+
+    &__picture
+        width: 100%
+        +background-cover-options(top center)
+        &:before
+            content: ""
+            display: block
+            padding-top: 100%
+
+    &__title
+        margin-top: 10px
+        margin-bottom: 10px
+        font-family: $SourceSansPro
+        font-size: 14px
+        line-height: 21px
+        color: $color_main_text
+
+    &__row
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 15px
+
+    &__block
+        flex: 1 1 50%
+        max-width: 50%
+
+    &__code
+        padding: 5px
+        font-family: $SourceSansPro
+        font-size: 12px
+        text-align: center
+        color: $color_code
+        border: 1px solid $color_border
+
+    &__stock
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+    &__price
+        height: 24px
+        margin-left: 10px
+        font-family: $SourceSansPro
+        font-size: 14px
+        font-weight: 600
+        text-align: center
+        line-height: 24px
+        color: $color_white
+        background-color: $color_crimson
+
+    &__button
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        padding: 9px 5px
+        color: $color_main_text
+        border: 1px solid $color_third_text
+        +transition(0.3s)
+        &:hover
+            color: $color_white
+            background-color: $color_blue
+            border: 1px solid transparent
+            +box-shadow(0 4px 8px rgba(0,0,0,0.07))
+
+    &__button > svg > path
+        +transition(0.3s)
+
+    &__button:hover > svg > path
+        fill: white
+
+    &__button > span
+        padding-left: 7px
+        font-family: $SourceSansPro
+        font-size: 16px
+
+.products--tile
+    flex-direction: row
+
+    .product
+        width: 270px
+        padding: 15px 30px 20px
+        background-color: $color_white
+        border: 1px solid #f0f0f0
+        cursor: pointer
+        &:hover
+            border: 1px solid $color_gray
+
+        &__picture
+            width: 100%
+            +background-cover-options(top center)
+            &:before
+                content: ""
+                display: block
+                padding-top: 100%
+
+        &__title
+            margin-top: 10px
+            margin-bottom: 10px
+            font-family: $SourceSansPro
+            font-size: 14px
+            line-height: 21px
+            color: $color_main_text
+
+        &__row
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 15px
+
+        &__block
+            flex: 1 1 50%
+            max-width: 50%
+
+        &__code
+            padding: 5px
+            font-family: $SourceSansPro
+            font-size: 12px
+            text-align: center
+            color: $color_code
+            border: 1px solid $color_border
+
+        &__stock
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+
+        &__price
+            height: 24px
+            margin-left: 10px
+            font-family: $SourceSansPro
+            font-size: 14px
+            font-weight: 600
+            text-align: center
+            line-height: 24px
+            color: $color_white
+            background-color: $color_crimson
+
+        &__button
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            padding: 9px 5px
+            color: $color_main_text
+            border: 1px solid $color_third_text
+            +transition(0.3s)
+            &:hover
+                color: $color_white
+                background-color: $color_blue
+                border: 1px solid transparent
+                +box-shadow(0 4px 8px rgba(0,0,0,0.07))
+
+        &__button > svg > path
+            +transition(0.3s)
+
+        &__button:hover > svg > path
+            fill: white
+
+        &__button > span
+            padding-left: 7px
+            font-family: $SourceSansPro
+            font-size: 16px
+
+.products--list
+    flex-direction: column
+    
+    .product
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        margin-bottom: 10px
+        padding: 10px 30px 10px 20px
+        background-color: $color_white
+        border: 1px solid #f0f0f0
+        cursor: pointer
+        &:hover
+            border: 1px solid $color_gray
+
+        &__picture
+            width: 50px
+            height: 50px
+            +background-cover-options(top center)
+
+        &__title
+            max-width: 200px
+            margin-left: 20px
+            font-family: $SourceSansPro
+            font-size: 14px
+            line-height: 21px
+            color: $color_main_text
+
+        &__row
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            width: 200px
+            margin-bottom: 0
+            
+            &:first-child
+                margin-left: auto
+
+        &__block
+            flex: 1 1 50%
+            max-width: 50%
+
+        &__code
+            padding: 5px
+            font-family: $SourceSansPro
+            font-size: 12px
+            text-align: center
+            color: $color_code
+            border: 1px solid $color_border
+
+        &__stock
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            margin-left: 10px
+
+        &__price
+            height: 24px
+            margin-left: 10px
+            font-family: $SourceSansPro
+            font-size: 14px
+            font-weight: 600
+            text-align: center
+            line-height: 24px
+            color: $color_white
+            background-color: $color_crimson
+
+        &__button
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            margin-left: 30px
+            padding: 9px 5px
+            color: $color_main_text
+            border: 1px solid $color_third_text
+            +transition(0.3s)
+            &:hover
+                color: $color_white
+                background-color: $color_blue
+                border: 1px solid transparent
+                +box-shadow(0 4px 8px rgba(0,0,0,0.07))
+
+        &__button > svg > path
+            +transition(0.3s)
+
+        &__button:hover > svg > path
+            fill: white
+
+        &__button > span
+            display: none
+

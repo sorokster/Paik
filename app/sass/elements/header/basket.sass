@@ -1,0 +1,32 @@
+.basket
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    &__item--image
+        img
+            height: 28px
+            margin-right: 10px
+
+    &__item--price
+        font-family: $SourceSansPro
+        font-size: 16px
+        font-weight: 600
+        text-transform: uppercase
+        color: $color_main_text
+
+    &__count
+        position: absolute
+        top: -10px
+        left: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 20px
+        height: 20px
+        font-family: $SourceSansPro
+        font-size: 11px
+        color: $color_white
+        background-color: $color_crimson
+        +border-radius(100%)

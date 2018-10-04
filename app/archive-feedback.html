@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    
+	<!-- JQuery Library -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+	<!-- JS Scripts -->
+	<script type="text/javascript" src="lib/owl.carousel.js"></script>
+	<script type="text/javascript" src="lib/mask.js"></script>
+	<script type="text/javascript" src="lib/custom.js"></script>
+
+	<!-- CSS Styles -->
+	<link type="text/css" rel="stylesheet" href="stylesheet/reset.css">
+	<link type="text/css" rel="stylesheet" href="stylesheet/animate.css">
+	<link type="text/css" rel="stylesheet" href="stylesheet/animation.css">
+	<link type="text/css" rel="stylesheet" href="stylesheet/owl.carousel.css">
+	<link type="text/css" rel="stylesheet" href="stylesheet/style.css">
+	<link type="text/css" rel="stylesheet" href="stylesheet/responsive.css">
+</head>
+<body class="main--page">
+
+	<div class="header--overlay leave"></div>
+	<div class="header--mobile leave">
+		<div class="m-auth">
+			<button class="m-auth__button m-auth__button--login">Вход</button>
+			<button class="m-auth__button m-auth__button--registration">Регистрация</button>
+		</div>
+		<nav class="m-nav m-nav--main">
+			<ul class="m-menu">
+				<li class="m-menu__item active">
+					<a href="index.html" class="m-menu__link m-menu__link--main">Главная</a>
+				</li>
+				<li class="m-menu__item">
+					<a href="menu.html" class="m-menu__link m-menu__link--catalog">Каталог</a>
+				</li>
+			</ul>
+		</nav>
+		<nav class="m-nav m-nav--profile">
+			<ul class="m-menu">
+				<li class="m-menu__item">
+					<a href="page-profile.html" class="m-menu__link m-menu__link--profile">Личный кабинет</a>
+				</li>
+				<li class="m-menu__item">
+					<a href="cart.html" class="m-menu__link m-menu__link--cart">Корзина</a>
+				</li>
+				<li class="m-menu__item">
+					<a href="archive.html" class="m-menu__link m-menu__link--archive">Архив заказов</a>
+				</li>
+				<li class="m-menu__item">
+					<a href="archive-feedback.html" class="m-menu__link m-menu__link--archive-feedback">История обратной связи</a>
+				</li>
+			</ul>
+		</nav>
+		<nav class="m-nav m-nav--pages">
+			<ul class="m-menu">
+				<li class="m-menu__item">
+					<a href="page-guarantee.html" class="m-menu__link m-menu__link--guarantee">Гарантия</a>
+				</li>
+				<li class="m-menu__item">
+					<a href="page-delivery.html" class="m-menu__link m-menu__link--delivery">Доставка</a>
+				</li>
+				<li class="m-menu__item">
+					<a href="page-about.html" class="m-menu__link m-menu__link--about">О нас</a>
+				</li>
+				<li class="m-menu__item">
+					<a href="page-contact.html" class="m-menu__link m-menu__link--contacts">Контакты</a>
+				</li>
+			</ul>
+		</nav>
+		<nav class="m-nav m-nav--logout">
+			<ul class="m-menu">
+				<li class="m-menu__item">
+					<a href="#" class="m-menu__link">Выход</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="popup">
+		<div class="popup__overlay"></div>
+		<button class="popup__close"></button>
+		<div class="popup__content popup__content--registration">
+			<div class="popup__title">Регистрация</div>
+			<div class="form--auth">
+				<div class="form__block">
+					<label for="popup_reg_username" class="form__label">Ваше имя</label>
+					<input id="popup_reg_username" type="text" name="" class="form__input" placeholder="Ваше имя">
+				</div>
+				<div class="form__block">
+					<label for="popup_reg_email" class="form__label">Ваш email</label>
+					<input id="popup_reg_email" type="text" name="" class="form__input" placeholder="Ваш email">
+				</div>
+				<div class="form__block">
+					<label for="popup_reg_password" class="form__label">Придумайте пароль</label>
+					<input id="popup_reg_password" type="text" name="" class="form__input" placeholder="Придумайте пароль">
+				</div>
+				<div class="form__block">
+					<label for="popup_reg_duplicate_password" class="form__label">Повторите пароль</label>
+					<input id="popup_reg_duplicate_password" type="text" name="" class="form__input" placeholder="Повторите пароль">
+				</div>
+				<div class="form__block form__block--enter">
+					<button type="submit">Зарегистрироваться</button>
+				</div>
+			</div>
+			<div class="form__switcher form__switcher--login">
+				<button>Я постоянный покупатель</button>
+			</div>
+		</div>
+		<div class="popup__content popup__content--login">
+			<div class="popup__title">Вход</div>
+			<div class="form--auth">
+				<div class="form__block">
+					<label for="popup_login_username" class="form__label">Электронная почта или телефон</label>
+					<input id="popup_login_username" type="text" name="" class="form__input" placeholder="Электронная почта или телефон">
+				</div>
+				<div class="form__block">
+					<label for="popup_login_email" class="form__label">Пароль</label>
+					<input id="popup_login_email" type="text" name="" class="form__input" placeholder="Пароль">
+				</div>
+				<div class="form__block form__block--extra">
+					<label class="checkbox"> Запомнить меня
+						<input type="checkbox">
+						<span class="checkbox_checkmark"></span>
+					</label>
+					<a href="#">Напомнить пароль</a>
+				</div>
+				<div class="form__block form__block--enter">
+					<button type="submit">Войти</button>
+				</div>
+			</div>
+			<div class="form__switcher form__switcher--registration">
+				<button>Регистрация</button>
+			</div>
+		</div>
+	</div>
+	<main class="main">
+		<header class="header--main">
+			<div class="container">
+				<div class="header header--top">
+					<div class="header__item header__item--hamburger">
+						<div class="menu__icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<div class="header__item header__item--logo">
+						<a class="header__link" href="index.html">
+							<img src="images/logo.png" alt="">
+						</a>
+					</div>
+					<div class="header__item header__item--menu">
+						<nav class="nav">
+							<ul class="nav__menu">
+								<li class="nav__item">
+									<a class="nav__link" href="catalog.html">Каталог товаров</a>
+								</li>
+								<li class="nav__item">
+									<a class="nav__link" href="page-contact.html">Контакты</a>
+								</li>
+								<li class="nav__item">
+									<a class="nav__link" href="page-guarantee.html">Гарантия</a>
+								</li>
+								<li class="nav__item">
+									<a class="nav__link" href="page-delivery.html">Доставка</a>
+								</li>
+								<li class="nav__item">
+									<a class="nav__link" href="page-about.html">О нас</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+                    <div class="header__item header__item--exchange-rates">
+                        <div class="course hryvna">
+                            <button class="course__button course__button--hryvna active">&#8372;</button>
+                            <button class="course__button course__button--dollar">&#36;</button>
+                        </div>
+                    </div>
+                    <div class="header__item header__item--basket">
+                        <a href="#" class="basket basket--hryvna">
+                            <div class="basket__item basket__item--image">
+                                <img src="images/icons/icon-basket.png" alt="Basket Icon">
+                            </div>
+                            <div class="basket__item basket__item--price"><span>1234</span><span class="basket__currency">&#8372;</span></div>
+                            <div class="basket__count">11</div>
+                        </a>
+                    </div>
+					<div class="header__item header__item--user">
+                        <a href="#" id="button-enter" class="header__link"><span>Вход в личный кабинет</span></a>
+						<div class="auth">
+							<div class="auth--login visible">
+								<div class="auth__title">Вход в интернет-магазин</div>
+								<div class="auth__row">
+									<div class="auth__block auth__block--login">
+										<div class="form">
+											<div class="form__block form__block--user">
+												<label for="user_login" class="form__label">Электронная почта или телефон</label>
+												<input id="user_login" type="text" name="" class="form__input">
+											</div>
+											<div class="form__block form__block--password">
+												<label for="user__password" class="form__label">Пароль</label>
+												<input id="user__password" type="password" name="" class="form__input">
+											</div>
+											<div class="form__block form__block--recall">
+												<a href="#">Напомнить пароль</a>
+											</div>
+											<div class="form__block form__block--remember">
+												<label class="checkbox"> Запомнить меня
+													<input type="checkbox">
+													<span class="checkbox_checkmark"></span>
+												</label>
+											</div>
+											<div class="form__block form__block--enter">
+												<button type="submit">Войти</button>
+												<a href="#">Отмена</a>
+											</div>
+										</div>
+									</div>
+									<div class="auth__block auth__block--sociallogin">
+										<div class="auth__column">
+											<div class="auth__block--title">Войти как пользователь</div>
+											<div class="auth__container">
+												<a href="#" class="auth__button auth__button--facebook">Facebook</a>
+												<a href="#" class="auth__button auth__button--google">Google</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="change-auth change-auth--registration">
+									<a href="javascript:void(0);">Зарегистрироваться</a>
+								</div>
+							</div>
+							<div class="auth--registration hidden">
+								<div class="auth__title">Зарегистрироваться в интернет-магазине</div>
+								<div class="auth__row">
+									<div class="auth__block auth__block--login">
+										<div class="form">
+											<div class="form__block form__block--user">
+												<label for="user__registration--login" class="form__label">Ваше имя</label>
+												<input id="user__registration--login" type="text" name="" class="form__input">
+											</div>
+											<div class="form__block form__block--password">
+												<label for="user__registration--password" class="form__label">Введите email или телефон</label>
+												<input id="user__registration--password" type="text" name="" class="form__input">
+											</div>
+											<div class="form__block form__block--password">
+												<label for="user__registration--password" class="form__label">Введите пароль</label>
+												<input id="user__registration--password" type="password" name="" class="form__input">
+											</div>
+											<div class="form__block form__block--password">
+												<label for="user__registration--password" class="form__label">Повторите пароль</label>
+												<input id="user__registration--password" type="password" name="" class="form__input">
+											</div>
+											<div class="form__block form__block--enter">
+												<button type="submit">Зарегистрироваться</button>
+												<a href="#">Отмена</a>
+											</div>
+										</div>
+									</div>
+									<div class="auth__block auth__block--sociallogin">
+										<div class="auth__column">
+											<div class="auth__block--title">Войти как пользователь</div>
+											<div class="auth__container">
+												<a href="#" class="auth__button auth__button--facebook">Facebook</a>
+												<a href="#" class="auth__button auth__button--google">Google</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="change-auth change-auth--login">
+									<a href="javascript:void(0);">У вас уже есть аккаут?</a>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+                <div class="header header--bottom">
+                    <div class="menu menu--toggle">
+                        <button class="menu__button menu__button--all-categories">
+                            <span>Все категории товара</span>
+                            <div class="menu__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                        <nav class="menu__nav menu__nav--index">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Карта памяти</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Смарт часы и браслеты</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                    <ul class="menu--nested menu--last">
+                                        <div class="title">
+                                            <div class="title__name">Проводные гарнитуры</div>
+                                            <div class="title__link"><a href="#">Смотреть все</a></div>
+                                        </div>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">
+                                                <span class="menu__name">Проводные гарнитуры HTC</span>
+                                                <span class="menu__count">25</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">
+                                                <span class="menu__name">Проводные гарнитуры HTC</span>
+                                                <span class="menu__count">25</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">
+                                                <span class="menu__name">Проводные гарнитуры HTC</span>
+                                                <span class="menu__count">25</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">
+                                                <span class="menu__name">Проводные гарнитуры HTC</span>
+                                                <span class="menu__count">25</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">
+                                                <span class="menu__name">Проводные гарнитуры HTC</span>
+                                                <span class="menu__count">25</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <a href="#" class="menu__link">
+                                                <span class="menu__name">Проводные гарнитуры HTC</span>
+                                                <span class="menu__count">25</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Наушники и гарнитура</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Кошельки и сумки для телефонов</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Чехлы для телефонов</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Защитные плёнки для экрана</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Палки для селфи</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Внешние зарядные устройства</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Аккумуляторы для телефонов</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Соединительные кабели</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Автомобильные держатели</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Зарядные устройства и адаптеры</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">
+                                        <span>Другие категории</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="search">
+                        <form method="GET" class="search__form">
+                            <div class="search__block">
+                                <div class="search__item search__item--form">
+                                    <input class="input" type="search" placeholder="Введите поисковый запрос">
+                                    <button class="submit" type="submit">
+                                        <span>Найти</span>
+                                        <svg width="19" height="18" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="18" height="19" fill="black" fill-opacity="0" transform="translate(38) scale(2) rotate(90)"/>
+                                            <path d="M1.5922 35.7495L13.9118 24.4892C16.5737 27.0262 20.0545 28.4207 23.75 28.4207C27.5557 28.4207 31.1353 26.9429 33.8257 24.258C36.5161 21.5732 38 18.0055 38 14.2104C38 10.4152 36.518 6.84561 33.8257 4.16269C31.1334 1.47977 27.5557 0 23.75 0C19.9443 0 16.3647 1.47788 13.6743 4.16269C10.9839 6.8475 9.5 10.4152 9.5 14.2104C9.5 17.4806 10.6001 20.5804 12.6255 23.0928L0.3078 34.3531C0.1026 34.5407 0 34.7946 0 35.0522C0 35.2815 0.0816994 35.5108 0.248901 35.6926C0.604202 36.0792 1.2046 36.1038 1.5903 35.7514L1.5922 35.7495ZM23.75 1.89282C30.5596 1.89282 36.1 7.41781 36.1 14.2085C36.1 20.9991 30.5596 26.5241 23.75 26.5241C16.9404 26.5241 11.4 20.9991 11.4 14.2085C11.4 7.41781 16.9404 1.89282 23.75 1.89282Z" fill="white"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="search__item search__item--list">
+                                    <div class="search__button">
+                                        <span>Во всех категориях</span>
+                                        <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"/>
+                                        </svg>
+                                    </div>
+                                    <nav class="search__nav">
+                                        <ul class="list">
+                                            <li class="list__item active">Во всех категориях</li>
+                                            <li class="list__item">Карты памяти</li>
+                                            <li class="list__item">Смарт часы и браслеты</li>
+                                            <li class="list__item">Наушники и гарнитура</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>	
+		</header>
+		
+		<section class="section section--single">
+			<div class="container">
+				<div class="content_wrap">
+					<div class="sidebar">
+						<div class="sidebar__container">
+							<div class="sidebar__block sidebar__block--title">Мой кабинет</div>
+							<div class="sidebar__block sidebar__block--menu">
+								<ul class="navigation">
+									<li class="navigation__item">
+										<a class="navigation__link" href="#">Личный кабинет</a>
+									</li>
+									<li class="navigation__item">
+										<a class="navigation__link" href="#">Корзины</a>
+									</li>
+									<li class="navigation__item">
+										<a class="navigation__link" href="#">Архив заказов</a>
+									</li>
+									<li class="navigation__item active">
+										<a class="navigation__link" href="#">История обратной связи</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="content">
+						<div class="content__title content__title--archive">
+							<span>История обратной связи</span>
+							<div class="sort">
+								<div class="sort__item sort__item--mapping">
+									<div class="sort__button sort__button-archive--tile">
+										<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="22" height="20" fill="black" fill-opacity="0"/>
+											<path d="M12.7188 0H20.9688C21.5383 0 22 0.479687 22 1.07143V8.21429C22 8.80603 21.5383 9.28571 20.9688 9.28571H12.7188C12.1492 9.28571 11.6875 8.80603 11.6875 8.21429V1.07143C11.6875 0.479687 12.1492 0 12.7188 0ZM9.28125 0H1.03125C0.461699 0 0 0.479687 0 1.07143V8.21429C0 8.80603 0.461699 9.28571 1.03125 9.28571H9.28125C9.8508 9.28571 10.3125 8.80603 10.3125 8.21429V1.07143C10.3125 0.479687 9.8508 0 9.28125 0ZM0 11.7857V18.9286C0 19.5203 0.461699 20 1.03125 20H9.28125C9.8508 20 10.3125 19.5203 10.3125 18.9286V11.7857C10.3125 11.194 9.8508 10.7143 9.28125 10.7143H1.03125C0.461699 10.7143 0 11.194 0 11.7857ZM12.7188 20H20.9688C21.5383 20 22 19.5203 22 18.9286V11.7857C22 11.194 21.5383 10.7143 20.9688 10.7143H12.7188C12.1492 10.7143 11.6875 11.194 11.6875 11.7857V18.9286C11.6875 19.5203 12.1492 20 12.7188 20Z" fill="#C4C4C4"/>
+										</svg>
+										<span>В деталях</span>	
+									</div>
+									<div class="sort__button sort__button-archive--list">
+										<svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="24.6154" height="20" fill="black" fill-opacity="0"/>
+											<path d="M6.15385 3.26923V1.34615C6.15385 0.921298 6.49822 0.576923 6.92308 0.576923H23.8462C24.271 0.576923 24.6154 0.921298 24.6154 1.34615V3.26923C24.6154 3.69409 24.271 4.03846 23.8462 4.03846H6.92308C6.49822 4.03846 6.15385 3.69409 6.15385 3.26923ZM6.92308 11.7308H23.8462C24.271 11.7308 24.6154 11.3864 24.6154 10.9615V9.03846C24.6154 8.61361 24.271 8.26923 23.8462 8.26923H6.92308C6.49822 8.26923 6.15385 8.61361 6.15385 9.03846V10.9615C6.15385 11.3864 6.49822 11.7308 6.92308 11.7308ZM6.92308 19.4231H23.8462C24.271 19.4231 24.6154 19.0787 24.6154 18.6538V16.7308C24.6154 16.3059 24.271 15.9615 23.8462 15.9615H6.92308C6.49822 15.9615 6.15385 16.3059 6.15385 16.7308V18.6538C6.15385 19.0787 6.49822 19.4231 6.92308 19.4231ZM0.769231 4.61538H3.84615C4.27101 4.61538 4.61538 4.27101 4.61538 3.84615V0.769231C4.61538 0.344375 4.27101 0 3.84615 0H0.769231C0.344375 0 0 0.344375 0 0.769231V3.84615C0 4.27101 0.344375 4.61538 0.769231 4.61538ZM0.769231 12.3077H3.84615C4.27101 12.3077 4.61538 11.9633 4.61538 11.5385V8.46154C4.61538 8.03668 4.27101 7.69231 3.84615 7.69231H0.769231C0.344375 7.69231 0 8.03668 0 8.46154V11.5385C0 11.9633 0.344375 12.3077 0.769231 12.3077ZM0.769231 20H3.84615C4.27101 20 4.61538 19.6556 4.61538 19.2308V16.1538C4.61538 15.729 4.27101 15.3846 3.84615 15.3846H0.769231C0.344375 15.3846 0 15.729 0 16.1538V19.2308C0 19.6556 0.344375 20 0.769231 20Z" fill="#C4C4C4"/>
+										</svg>
+										<span>Списком</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="content__block">
+							<div class="feedback feedback--tile">
+                                <div class="feedback__container">
+                                    <div class="item">
+                                        <div class="item__row">
+                                            <div class="item__block item__block--date">
+                                                <div class="date">
+                                                    <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"></path>
+                                                    </svg>
+                                                    <span>30 июля 2018 17:20</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--subject">
+                                                <div class="subject">
+                                                    <span>Сообщение на тему "Гарантия и возврат товара"</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--status">
+                                                <div class="title">Статус сообщения</div>
+                                                <div class="status">  
+                                                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.36364 11.8657L1.59091 7.16418L0 8.73134L6.36364 15L20 1.56716L18.4091 0L6.36364 11.8657Z" fill="#03B581"></path>
+                                                    </svg>
+                                                    <span>Ответ получен</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__row">
+                                                <div class="details__item">
+                                                    <div class="title">Ваше сообщение:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                                <div class="details__item">
+                                                    <div class="title">Ответ:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__row">
+                                            <div class="item__block item__block--date">
+                                                <div class="date">
+                                                    <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"></path>
+                                                    </svg>
+                                                    <span>30 июля 2018 17:20</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--subject">
+                                                <div class="subject">
+                                                    <span>Сообщение на тему "Гарантия и возврат товара"</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--status">
+                                                <div class="title">Статус сообщения</div>
+                                                <div class="status">  
+                                                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.36364 11.8657L1.59091 7.16418L0 8.73134L6.36364 15L20 1.56716L18.4091 0L6.36364 11.8657Z" fill="#03B581"></path>
+                                                    </svg>
+                                                    <span>Ответ получен</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__row">
+                                                <div class="details__item">
+                                                    <div class="title">Ваше сообщение:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                                <div class="details__item">
+                                                    <div class="title">Ответ:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__row">
+                                            <div class="item__block item__block--date">
+                                                <div class="date">
+                                                    <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"></path>
+                                                    </svg>
+                                                    <span>30 июля 2018 17:20</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--subject">
+                                                <div class="subject">
+                                                    <span>Сообщение на тему "Гарантия и возврат товара"</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--status">
+                                                <div class="title">Статус сообщения</div>
+                                                <div class="status">
+                                                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.36364 11.8657L1.59091 7.16418L0 8.73134L6.36364 15L20 1.56716L18.4091 0L6.36364 11.8657Z" fill="#03B581"></path>
+                                                    </svg>
+                                                    <span>Ответ получен</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__row">
+                                                <div class="details__item">
+                                                    <div class="title">Ваше сообщение:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                                <div class="details__item">
+                                                    <div class="title">Ответ:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__row">
+                                            <div class="item__block item__block--date">
+                                                <div class="date">
+                                                    <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"></path>
+                                                    </svg>
+                                                    <span>30 июля 2018 17:20</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--subject">
+                                                <div class="subject">
+                                                    <span>Сообщение на тему "Гарантия и возврат товара"</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--status">
+                                                <div class="title">Статус сообщения</div>
+                                                <div class="status">  
+                                                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.36364 11.8657L1.59091 7.16418L0 8.73134L6.36364 15L20 1.56716L18.4091 0L6.36364 11.8657Z" fill="#03B581"></path>
+                                                    </svg>
+                                                    <span>Ответ получен</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__row">
+                                                <div class="details__item">
+                                                    <div class="title">Ваше сообщение:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                                <div class="details__item">
+                                                    <div class="title">Ответ:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__row">
+                                            <div class="item__block item__block--date">
+                                                <div class="date">
+                                                    <svg width="20" height="32" viewBox="0 0 20 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17.874 14.876C18.084 15.084 18.188 15.324 18.188 15.594C18.188 15.866 18.084 16.1059 17.874 16.3119L3.31201 30.8739C3.10401 31.0839 2.86599 31.188 2.59399 31.188C2.32399 31.188 2.08398 31.0839 1.87598 30.8739L0.312012 29.314C0.104012 29.104 0 28.864 0 28.594C0 28.324 0.104012 28.084 0.312012 27.876L12.594 15.594L0.312012 3.31396C0.104012 3.10397 0 2.86599 0 2.59399C0 2.32199 0.104012 2.08398 0.312012 1.87598L1.87598 0.313965C2.08398 0.103966 2.32399 -0.00012207 2.59399 -0.00012207C2.86599 -0.00012207 3.10401 0.103966 3.31201 0.313965L17.874 14.876Z" fill="#74889A"></path>
+                                                    </svg>
+                                                    <span>30 июля 2018 17:20</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--subject">
+                                                <div class="subject">
+                                                    <span>Сообщение на тему "Гарантия и возврат товара"</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__block item__block--status">
+                                                <div class="title">Статус сообщения</div>
+                                                <div class="status">  
+                                                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.36364 11.8657L1.59091 7.16418L0 8.73134L6.36364 15L20 1.56716L18.4091 0L6.36364 11.8657Z" fill="#03B581"></path>
+                                                    </svg>
+                                                    <span>Ответ получен</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="details__row">
+                                                <div class="details__item">
+                                                    <div class="title">Ваше сообщение:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                                <div class="details__item">
+                                                    <div class="title">Ответ:</div>
+                                                    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="info">
+					<div class="info__block info__block--contacts">
+						<div class="info__item info__item--title">Контакты</div>
+						<a class="info__item info__item--phone" href="tel:0985513555">098-551-35-55</a>
+						<a class="info__item info__item--phone" href="tel:0930111222">093-011-12-22</a>
+					</div>
+					<div class="info__block info__block--opening-hours">
+						<div class="info__item info__item--title">Часы работы</div>
+						<div class="info__item info__item--time">ВТ-ВС с 9:00 до 18:00</div>
+						<div class="info__item info__item--time">ПН выходной</div>
+					</div>
+					<div class="info__block info__block--top">
+						<button class="gotop">
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.776367 13.9103L3.07487 16.2089L12.2689 7.01483L12.2689 27.0447H15.5525L15.5525 7.01483L24.7465 16.2089L27.045 13.9103L13.9107 0.776022L0.776367 13.9103Z" fill="#EAECF1"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="copyright">&copy; SGMA Мобильные аксессуары 2018 </div>
+			</div>
+		</footer>
+	</main>
+</body>
+</html>

@@ -1,0 +1,180 @@
+.form
+    font-family: $SourceSansPro
+    width: 100%
+    max-width: 420px
+    td
+        span
+            display: block
+            max-width: 180px
+            font-family: $SourceSansPro
+            font-size: 16px
+            color: $color_main_text
+
+        input
+            width: 100%
+            max-width: 250px
+
+        select
+            width: 100%
+            max-width: 250px
+
+    td:first-child
+        padding-right: 20px
+
+    .form__input
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 250px
+        margin-bottom: 10px
+
+    .form__add
+        margin-left: 10px
+        margin-bottom: 20px
+        font-family: $SourceSansPro
+        font-size: 16px
+        text-decoration: underline
+        color: $color_light_blue
+        cursor: pointer
+        +transition(.3s)
+
+    .remove__input
+        width: 24px
+        height: 24px
+        cursor: pointer
+        +border-radius(100%)
+        +background-close-icon-options
+        background-image: url('../images/icons/icon-close.svg')
+
+    
+    .save
+        display: flex
+        flex-direction: row
+        justify-content: left
+        align-items: center
+        margin-top: 40px
+        margin-bottom: 30px
+
+        .submit
+            display: flex
+            width: auto
+            margin-right: 20px
+            padding: 8px 20px
+            font-family: $SourceSansPro
+            font-size: 20px
+            font-weight: 600
+            color: $color_white
+            +background-gradient
+
+        .cancel
+            display: flex
+            color: $color_second_text
+            border-bottom: 1px dashed $color_black
+            +transition(0.3s)
+            &:hover
+                color: $color_red
+                border-bottom: 1px dashed $color_red
+
+.form--user-data
+    max-width: 500px
+    .form__input
+        width: 290px
+
+.form--profile
+    td
+        padding: 10px 0
+
+.form--feedback
+    .form__container
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        .input
+            width: calc( 50% - 5px )
+        textarea.input
+            margin-top: 10px
+            padding: 10px
+            width: 100%
+            font-family: $SourceSansPro
+            font-size: 16px
+            resize: none
+
+.form--checkout
+    margin-left: 10px
+    color: $color_third_text
+    td
+        padding: 5px 0
+    tr
+        &:first-child
+            td
+                padding-bottom: 15px
+
+.form--payment
+    margin-left: 10px
+    color: $color_third_text
+    td
+        padding: 5px 0
+
+.form .next-step
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    margin: 10px 0 0 0
+    button
+        display: flex
+        width: auto
+        padding: 8px 20px
+        font-family: $SourceSansPro
+        font-size: 16px
+        font-weight: 600
+        color: $color_white
+        +background-gradient
+
+.form--social
+    padding-top: 25px
+    border-top: 1px solid $color_border
+    .title
+        margin-bottom: 15px
+        font-family: $SourceSansPro
+        font-size: 16px
+        font-weight: 600
+        color: $color_main_text
+        text-align: center
+    .form__block
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    .form__button
+        display: block
+        width: 190px
+        margin-bottom: 30px
+        padding: 10px 0
+        font-family: $SourceSansPro
+        font-size: 16px
+        text-align: center
+        color: $color_white
+        +border-radius(5px)
+        background-repeat: no-repeat
+        background-color: #DDDDDD
+        background-position: 2px center
+        background-size: 36px 100%
+        +transition(.3s)
+    .form__button--facebook
+        background-image: url(../images/icons/icon-facebook.svg)
+        background-color: #29487d
+    .form__button--google
+        background-image: url(../images/icons/icon-google.svg)
+        background-color: #DB4437
+.prev-step
+    display: block
+    padding: 0
+    color: $color_blue
+    border-bottom: 1px dashed $color_blue
+
+table.table--password
+    .form__input
+        width: 250px

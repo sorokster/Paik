@@ -1,0 +1,45 @@
+.gallery
+    padding: 20px
+    border: 1px solid $color_border
+    background-color: $color_white
+
+#gallery
+    margin-bottom: 25px
+
+#gallery .item
+    background: #0c83e7
+    height: 500px
+    +background-cover-options(center center)
+
+#thumbnails .item
+    width: 70px
+    height: 70px
+    cursor: pointer
+    +background-cover-options(center center)
+    border: 1px solid $color_border
+
+.current .item
+    background: #0c83e7
+
+.owl-theme .owl-nav [class*='owl-']
+    transition: all .3s ease
+    &.disabled:hover
+       background-color: #D6D6D6
+
+//arrows on first carousel
+#gallery.owl-theme
+    position: relative
+
+#gallery.owl-theme .owl-next, 
+#gallery.owl-theme .owl-prev
+    width: 22px
+    height: 40px
+    margin-top: -20px
+    position: absolute
+    top: 50%
+
+#gallery.owl-theme .owl-prev
+    left: 10px
+
+#gallery.owl-theme .owl-next
+    right: 10px

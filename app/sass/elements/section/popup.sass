@@ -1,0 +1,104 @@
+.popup
+    display: none
+    position: fixed
+    width: 100%
+    height: 100vh
+    overflow: auto
+    z-index: 50
+    &__overlay
+        position: fixed
+        width: 100%
+        height: 100%
+        opacity: .7
+        z-index: 48
+        background-color: #333
+
+    &__close
+        position: absolute
+        top: 30px
+        right: 10px
+        display: block
+        width: 30px
+        height: 30px
+        background: transparent url('../images/icons/icon-close.svg') no-repeat center center
+        background-size: contain 
+        z-index: 50
+    &__content
+        display: none
+        position: absolute
+        top: 60px
+        left: 10px
+        right: 10px
+        width: calc( 100% - 20px )
+        max-width: 400px
+        margin: 0 auto 50px
+        z-index: 50
+        overflow: hidden
+        background-color: white
+
+    &__title
+        padding: 15px 15px 0
+        font-family: $SourceSansPro
+        font-size: 26px
+        text-align: center
+        color: $color_main_text
+
+    .form
+        &--auth
+            display: block
+            padding: 0 15px 15px
+            .form__block
+                margin-top: 15px
+                .form__label
+                    display: block
+                    margin-bottom: 5px
+                    font-family: $SourceSansPro
+                    font-size: 14px
+                .form__input
+                    display: block
+                    width: 100%
+                    padding: 4px 10px
+                    border: 1px solid #DDDDDD
+                &--enter
+                    display: flex
+                    flex-direction: row
+                    justify-content: center
+                    align-items: center
+                    button
+                        display: flex
+                        justify-content: center
+                        width: 100%
+                        padding: 8px 20px
+                        font-family: $SourceSansPro
+                        font-size: 20px
+                        font-weight: 600
+                        color: $color_white
+                        +background-gradient
+                &--extra
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                    a
+                        font-family: $SourceSansPro
+                        font-size: 14px
+                        color: $color_blue
+                        border-bottom: 1px dashed $color_blue
+                        
+    .form__switcher
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        padding: 15px
+        border-top: 1px solid $color_border
+        button
+            display: flex
+            justify-content: center
+            font-family: $SourceSansPro
+            font-size: 16px
+            color: $color_blue
+
+
+                
+        

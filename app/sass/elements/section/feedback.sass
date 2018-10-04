@@ -1,0 +1,88 @@
+.feedback
+    .item
+        margin-bottom: 20px
+        +border-radius(5px)
+        border: 1px solid $color_border
+        &:last-child
+            margin-bottom: 0
+        &__row
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+        &__block
+            display: flex
+            flex-direction: row
+            align-items: center
+            padding: 10px 0
+            &--date
+                flex: 0 1 auto
+                cursor: pointer
+                .date
+                    margin-left: 10px
+                    font-family: $SourceSansPro
+                    font-size: 14px
+                    color: $color_blue
+                    svg
+                        position: relative
+                        top: 1px
+                        width: 5px
+                        height: 10px
+                        margin-right: 5px
+                        +rotate(90deg)
+                        path
+                            fill: $color_blue
+            
+            &--date.open
+                svg
+                    top: 0;
+                    +rotate(270deg)
+
+            &--subject
+                flex: 0 1 auto
+                .subject
+                    font-family: $SourceSansPro
+                    font-size: 14px
+                    color: $color_main_text
+
+
+            &--status
+                flex: 0 1 280px
+                width: 280px
+                border-left: 1px solid $color_border
+                .title
+                    font-family: $SourceSansPro
+                    font-size: 14px
+                    font-weight: 600
+                .status
+                    margin-left: 20px
+                    font-family: $SourceSansPro
+                    font-size: 14px
+                    font-weight: 600
+                    color: $color_green
+
+    .details
+        border-top: 1px solid $color_border
+        &__row
+            display: flex
+            flex-direction: row
+            .details__item
+                flex: 1 1 50%
+                width: 50%
+                padding: 15px
+                font-family: $SourceSansPro
+                font-size: 14px
+                border-right: 1px solid $color_border
+                &:last-child
+                    border-right: 0
+
+                .title
+                    margin-bottom: 10px
+                    color: $color_gray
+
+                .message
+                    line-height: 18px
+
+.feedback--list
+    .details
+        display: none
+

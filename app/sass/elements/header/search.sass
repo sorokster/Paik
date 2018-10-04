@@ -1,0 +1,84 @@
+.search
+    width: calc( 100% - 280px )
+    margin-left: 10px
+
+    &__block
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+    
+    &__item
+        display: flex
+        &--form
+            flex: 1 1 auto
+            .input
+                width: 100%
+                +box-shadow(inset 2px 2px 8px rgba(0,0,0,0.07))
+
+    &__button
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        margin-left: 15px
+        cursor: pointer
+    
+    &__button > span
+        font-family: $SourceSansPro
+        font-size: 14px
+        color: $color_blue
+
+    &__button > svg
+        width: 10px
+        height: 14px
+        margin-left: 5px
+        margin-top: 1px
+        +rotate(90deg)
+        +transition(0.3s)
+
+    &__button.search__button--open > svg
+        +rotate(270deg)
+
+    .submit
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 0 10px
+    
+    .submit > svg
+        margin-left: 10px
+
+    &__item--list
+        position: relative
+        height: 40px
+
+    &__item--list
+        .list
+            padding: 10px
+
+    
+    &__item--list
+        .list
+            &__item
+                padding: 8px 15px
+                font-family: $SourceSansPro
+                font-size: 14px
+                border-bottom: 1px solid $color_border
+                cursor: pointer
+
+            &__item:last-child
+                border-bottom: 0
+
+    &__nav
+        display: none
+        position: absolute
+        top: 100%
+        right: 0
+        min-width: 250px
+        z-index: 5
+        background-color: $color_white
+        +box-shadow(0 4px 8px rgba(0,0,0,0.25))
+
+    

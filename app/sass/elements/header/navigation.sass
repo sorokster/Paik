@@ -1,0 +1,24 @@
+.nav
+    position: relative
+
+    &__menu
+        display: flex
+        flex-direction: row
+        justify-content: left
+        align-items: center
+    &__item
+        margin-right: 15px
+    &__item:last-child
+        margin-right: 0
+
+    &__link
+        font-family: $SourceSansPro
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+        color: $color_main_text
+        +transition(0.3s)
+        &hover
+            color: $color_blue
+
+

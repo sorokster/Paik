@@ -1,0 +1,45 @@
+.filter
+    width: 100%
+
+    &__item
+        margin-bottom: 11px
+
+        &:last-child
+            margin-bottom: 0
+
+    &__title
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 10px 0
+        border-top: 1px solid $color_border
+        cursor: pointer
+
+        span
+            font-family: $SourceSansPro
+            font-size: 16px
+            color: $color_light_blue
+
+        svg
+            width: 10px
+            margin-right: 5px
+            +rotate(90deg)
+            +transition(0.3s)
+            
+            path
+                fill: $color_light_blue
+
+    &__block
+        display: none
+        margin: 10px 0 20px
+
+.filter.open svg
+    +rotate(270deg)
+
+
+.filter .checkbox
+    margin: 0
+    margin-bottom: 3px
+    padding-top: 3px
+    font-size: 14px

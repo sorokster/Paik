@@ -1,0 +1,46 @@
+.course
+    position: relative
+    display: flex
+    flex-direction: row
+    width: 90px
+    height: 28px
+    border: 1px solid $color_border
+    +border-radius(5px)
+    overflow: hidden
+    background-color: trasnparent
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        width: 50%
+        height: 100%
+        +border-radius(4px)
+        z-index: 1
+        +background-gradient
+        +transition(0.3s)
+
+    &.hryvna:before
+        left: 0
+        +transition(0.3s)
+        
+    &.dollar:before
+        left: 50%
+        +transition(0.3s)
+
+    &__button
+        flex: 1 1 50%
+        max-width: 50%
+        font-family: $SourceSansPro
+        font-size: 18px
+        font-weight: 600
+        color: $color_gray
+        border: 0
+        outline: none
+        z-index: 2
+        background-color: transparent
+        cursor: pointer
+        +transition(0.3s)
+        &:hover
+            color: $color_border
+        &.active
+            color: $color_white

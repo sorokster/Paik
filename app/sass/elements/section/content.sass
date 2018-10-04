@@ -1,0 +1,72 @@
+.content_wrap
+    display: flex
+    flex-direction: row
+    justify-content: left
+    margin-top: 15px
+
+    .content
+        flex: 1 1 calc( 100% - 280px )
+        width: calc( 100% - 280px )
+
+
+.content
+
+    &__form
+        max-width: 500px
+    &__title
+        margin-top: 30px
+        margin-bottom: 10px
+        padding-left: 20px
+        font-family: $SourceSansPro
+        font-size: 36px
+        font-weight: 600
+        color: $color_second_text
+        &:first-child
+            margin-top: 0
+        &--archive
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            .sort__button
+                display: flex
+                flex-direction: row
+                justify-content: left
+                align-items: center
+                &:first-child
+                    margin-right: 10px
+                span
+                    padding-left: 5px
+                    font-size: 14px
+                    color: $color_main_text
+
+    &__block
+        padding: 20px
+        background: $color_white
+        &--nopadding
+            padding: 0!important
+        &--transparent
+            background-color: transparent
+
+    p
+        margin-bottom: 20px
+        font-family: $SourceSansPro
+        font-size: 16px
+        line-height: 24px
+        color: $color_main_text
+        &:last-child
+            margin-bottom: 0
+
+    .delivery
+        margin-left: 20px
+        margin-bottom: 30px
+        td
+            padding: 10px 0
+            font-family: $SourceSansPro
+            font-size: 16px
+            color: $color_main_text
+            &:first-child
+                padding-right: 75px
+                font-weight: 600
+            &:nth-child(2)
+                color: $color_code

@@ -1,0 +1,50 @@
+.catalog--mobile
+    display: none
+    margin-bottom: 25px
+    .title
+        font-family: $SourceSansPro
+        font-size: 18px
+        font-weight: 600
+        color: $color_main_text
+        margin-bottom: 15px
+
+    .list
+        &__item
+            border-bottom: 1px solid $color_border
+            &:last-child
+                border-bottom: 0
+        &__link
+            display: flex
+            flex-direction: row
+            justify-content: left
+            align-items: center
+            padding: 5px 10px
+            background-color: white
+
+        &__picture
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 50px
+            height: 50px
+            img
+                max-width: 100%
+                max-height: 100%
+        &__title
+            padding-left: 10px
+            font-family: $SourceSansPro
+            font-size: 14px
+            color: $color_main_text
+        
+    &.category--mobile
+        .list
+            &__link
+                padding: 10px
+                justify-content: space-between
+
+            &__title
+                padding-left: 0
+
+
+            
+

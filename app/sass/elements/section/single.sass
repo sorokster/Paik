@@ -1,0 +1,101 @@
+.single
+    margin: 10px 0
+    &__row
+        display: flex
+        flex-direction: row
+        justify-content: left
+
+    &__block
+        &--gallery
+            flex: 1 1 500px
+            max-width: 500px
+
+        &--info
+            flex: 1 1 calc( 100% - 500px )
+            max-width: calc( 100% - 500px )
+    
+    .info
+        display: flex
+        flex-direction: column
+        &__block
+            display: flex
+            flex-direction: column
+            width: 100%
+            padding: 20px 0 0 20px
+            &--product
+                flex-direction: row
+                background-color: white
+                padding: 0
+                border: 1px solid $color_border
+                border-left: 0
+                .row
+                    display: flex
+                    flex-direction: column
+                    padding: 20px
+                    &:first-child
+                        width: calc( 100% - 200px )
+                        border-right: 1px solid $color_border
+                    &:nth-child(2)
+                        justify-content: center
+                        align-items: center
+                        width: 200px
+                    &__block
+                        &--title
+                            font-family: $SourceSansPro
+                            font-size: 16px
+                            line-height: 24px
+                            color: $color_main_text
+                        &--price
+                            .block__price
+                                display: block
+                                font-family: "Source Sans Pro",sans-serif
+                                font-size: 26px
+                                font-weight: 600
+                                text-align: center
+                                color: $color_crimson
+                        &--count
+                            max-width: 100px
+                            text-align: center
+                            .title
+                                font-size: 14px
+                                font-weight: 400
+                                color: $color_code
+                        
+        .title
+            font-family: $SourceSansPro
+            font-size: 16px
+            font-weight: 600
+            line-height: 24px
+
+        .text
+            position: relative
+            font-family: $SourceSansPro
+            font-size: 16px
+            line-height: 24px
+            color: $color_main_text
+            
+            &__more
+                span
+                    display: none
+
+            &__ellipses
+                display: inline
+
+            &__link
+                display: block
+                margin-top: 10px
+                padding: 0 10px 0 0
+                font-family: $SourceSansPro
+                font-size: 16px
+                line-height: 24px
+                color: $color_code
+                background-color: $color_bg
+                &:after
+                    content: ""
+                    position: absolute
+                    bottom: 10px
+                    display: block
+                    width: 100%
+                    height: 1px
+                    z-index: -1
+                    background-color: $color_gray

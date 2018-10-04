@@ -1,0 +1,53 @@
+=border-radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius:    $radius
+    -ms-border-radius:     $radius
+    border-radius:         $radius
+
+=transition($time)
+    -webkit-transition: all $time ease-in-out
+    -moz-transition:    all $time ease-in-out
+    transition:         all $time ease-in-out
+
+=box-sizings($size)
+    -webkit-box-sizing: $size
+    -moz-box-sizing:    $size
+    box-sizing:         $size
+
+=box-shadow($options)
+    -webkit-box-shadow: $options
+    -moz-box-shadow:    $options
+    box-shadow:         $options
+
+=background-gradient
+    background: $color_blue
+    background: linear-gradient(to bottom, $color_blue, $color_dark_blue)
+
+=rotate($deg)
+    -webkit-transform: rotate($deg)
+    -moz-transform:    rotate($deg)
+    transform:         rotate($deg)
+
+=translate-center
+    -webkit-transform: translate(-50%, -50%)
+    -moz-transform:    translate(-50%, -50%)
+    transform:         translate(-50%, -50%)
+
+=background-cover-options($position)
+	background-repeat: no-repeat
+	background-color: transparent
+	background-position: $position
+	background-size: cover
+
+=background-footer-icons-options($size)
+	background-repeat: no-repeat
+	background-color: transparent
+	background-position: left center
+	background-size: $size
+
+=background-close-icon-options
+	background-repeat: no-repeat
+	background-color: $color_gray
+	background-position: center center
+	background-size: 12px
+

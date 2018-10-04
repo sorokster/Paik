@@ -1,0 +1,33 @@
+.contact
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    &__block
+        display: flex
+        flex-direction: row
+        &:first-child
+            flex: 1 1 calc( 100% - 320px )
+            max-width: calc( 100% - 320px )
+            padding: 20px
+        &:nth-child(2)
+            flex: 1 1 320px
+            max-width: 320px
+    &__item
+        display: flex
+        flex-direction: column
+        width: 50%
+        .title
+            font-family: $SourceSansPro
+            font-size: 14px
+            font-weight: bold
+            margin-top: 20px
+            margin-bottom: 10px
+            &:first-child
+                margin-top: 0
+
+        .text
+            margin: 5px 0
+            font-family: $SourceSansPro
+            font-size: 20px
+            color: $color_link_hover

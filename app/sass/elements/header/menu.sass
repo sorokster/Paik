@@ -1,0 +1,185 @@
+.menu
+    position: relative
+    width: 270px
+    &__button
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        height: 40px
+        padding: 0 20px 0 15px
+        font-family: $SourceSansPro
+        font-size: 16px
+        color: $color_white
+        border: 0
+        +background-gradient
+
+    &__icon
+        position: relative
+        width: 20px
+        height: 14px
+
+        span
+            position: absolute
+            left: 0
+            width: 100%
+            height: 2px
+            background-color: $color_white
+
+        span:nth-child(1)
+            top: 0px
+
+        span:nth-child(2)
+            top: 6px
+
+        span:nth-child(3)
+            top: 12px
+
+    
+    &__nav
+        position: absolute
+        top: 40px
+        left: 0
+        display: flex
+        flex-direction: column
+        width: 100%
+        margin: 0
+        padding: 0
+        z-index: 20
+        background-color: $color_white
+
+    &__item
+        position: relative
+        display: block
+        border-bottom: 1px solid $color_border
+        svg
+            position: absolute
+            top: 3px
+            right: 10px
+            display: block
+            width: 9px
+            +rotate(0)
+            +transition(0.3s)
+
+    &__list > &__item:hover > &__link
+        color: $color_white
+        background: $color_blue
+
+    &__list > &__item:hover > &--nested
+        display: block
+                
+    &__list > &__item:hover svg
+        +rotate(90deg)
+
+    &__list > &__item:hover svg > path
+        fill: $color_white
+
+    &__link
+        display: block
+        padding: 11px 20px 11px 15px
+        font-family: $SourceSansPro
+        font-size: 14px
+        white-space: nowrap
+        overflow: hidden
+        text-align: left
+        text-overflow: ellipsis
+        color: $color_second_text
+        +transition(0.3s)
+        
+    &--nested
+        display: none
+        width: 330px
+        position: absolute
+        top: 0
+        left: 100%
+        padding: 10px 25px 10px 20px
+        border: 1px solid $color_border
+        background-color: $color_white
+        z-index: 5
+        +box-shadow(2px 2px 8px rgba(0,0,0,0.25))
+        +transition(0.3s)
+    
+    &--nested
+        .menu__link
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            padding: 10px 0 5px 0
+
+    &--nested
+        .title
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            padding: 5px 0
+            border-bottom: 1px solid $color_border
+
+    &--nested
+        .title
+            &__name
+                font-family: $SourceSansPro
+                font-size: 14px
+                font-weight: 600
+                color: $color_main_text
+
+    &--nested
+        .title
+            &__name
+                font-family: $SourceSansPro
+                font-size: 14px
+                font-weight: 600
+                color: $color_main_text
+
+    &--nested
+        .title
+            &__link
+                margin-left: auto
+                font-family: $SourceSansPro
+                font-size: 14px
+                a
+                    color: $color_blue
+
+    &--nested
+        .title
+            &__name
+                a
+                    display: block
+                    font-family: $SourceSansPro
+                    font-size: 14px
+                    font-weight: 600
+                    color: $color_blue
+
+    &--last
+        .menu__link
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+
+    &--last
+        .menu__name
+            border-bottom: 1px dashed transparent
+            +transition(0.3s)
+
+    &--last
+        .menu__count
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 20px
+            height: 20px
+            font-family: $SourceSansPro
+            font-size: 12px
+            font-weight: 600
+            color: $color_white
+            background-color: $color_blue
+            +border-radius(100%)
+
+    &--last &__item:hover > &__link > &__name
+        border-bottom: 1px dashed $color_black
+
+    &--toggle .menu__nav
+        display: none

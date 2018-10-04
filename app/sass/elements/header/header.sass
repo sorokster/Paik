@@ -1,0 +1,192 @@
+.header--main
+    position: relative
+    width: 100%
+    height: 100px
+    background-color: white
+    -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25)
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25)
+
+.header
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    height: 60px
+    &--top
+        padding: 7px 0 5px
+    &__item
+        display: flex
+    
+    &__item--hamburger
+        display: none    
+    &__item--logo
+        margin-right: 25px
+        img
+            height: 45px
+    &__item--exchange-rates
+        margin-left: auto
+        padding-right: 15px
+        border-right: 1px solid #e8e8e8
+    &__item--basket
+        padding: 0 25px
+        border-right: 1px solid #e8e8e8
+    &__item--user
+        position: relative
+        padding-left: 15px
+        .header__link	
+            display: block
+            padding-left: 35px
+            font-family: 'Source Sans Pro', sans-serif
+            line-height: 20px
+            color: #4F4F4F
+            background: transparent url('../images/icons/icon-user.png') no-repeat left center
+            background-size: 20px 20px
+
+    &--bottom
+        height: 40px
+        justify-content: left
+
+    &--overlay
+        position: fixed
+        width: 100%
+        height: 100%
+        z-index: 48
+        background-color: $color_third_text
+    &--mobile
+        position: fixed
+        width: 78%
+        max-width: 300px
+        height: 100%
+        z-index: 50
+        overflow: auto
+        background-color: $color_white
+        .m-nav
+            border-bottom: 1px solid $color_border
+            &:last-child
+                border-bottom: 0
+            .m-menu
+                display: flex
+                flex-direction: column
+
+                &__item
+                    display: flex
+                    &.active
+                        background-color: #fafafa
+
+                &__link
+                    padding: 11px 25px 12px 55px
+                    font-family: $SourceSansPro
+                    font-size: 16px
+                    color: $color_main_text
+                    background-color: transparent
+                    background-repeat: no-repeat
+            &--main
+                .m-menu__item
+                    &:nth-child(1)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-home.svg')
+                    &:nth-child(2)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-catalog.svg')
+            &--profile
+                .m-menu__item
+                    &:nth-child(1)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-user.svg')
+                    &:nth-child(2)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-basket.svg')
+                    &:nth-child(3)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-archive.svg')
+                    &:nth-child(4)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-archive-feedback.svg')
+            &--pages
+                .m-menu__item
+                    &:nth-child(1)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-guarantee.svg')
+                    &:nth-child(2)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-delivery.svg')
+                    &:nth-child(3)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-about.svg')
+                    &:nth-child(4)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-contacts.svg')
+            &--logout
+                .m-menu__item
+                    &:nth-child(1)
+                        .m-menu__link
+                            background-position: 20px center
+                            background-size: 20px
+                            background-image: url('../images/icons/icon-menu-logout.svg')
+
+
+        .m-auth
+            padding: 10px 0 10px 15px
+            background-color: $color_blue
+            &__button
+                color: white
+                cursor: pointer
+
+    &--overlay.leave
+        visibility: hidden
+        -webkit-transform: translateX(-100%)
+        transform: translateX(-100%)
+        opacity: 0
+        -webkit-transition: opacity .3s linear,-webkit-transform 0ms ease-out .3s
+        transition: opacity .3s linear,-webkit-transform 0ms ease-out .3s
+        transition: transform 0ms ease-out .3s,opacity .3s linear
+        transition: transform 0ms ease-out .3s,opacity .3s linear,-webkit-transform 0ms ease-out .3s
+
+    &--mobile.leave
+        visibility: hidden
+        -webkit-transform: translateX(-100%)
+        transform: translateX(-100%)
+        opacity: 0
+        -webkit-transition: opacity .3s linear,-webkit-transform 0ms ease-out .3s
+        transition: opacity .3s linear,-webkit-transform 0ms ease-out .3s
+        transition: transform 0ms ease-out .3s,opacity .3s linear
+        transition: transform 0ms ease-out .3s,opacity .3s linear,-webkit-transform 0ms ease-out .3s
+
+    &--overlay.enter
+        visibility: visible
+        opacity: .7
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        -webkit-transition: opacity .3s linear
+        transition: opacity .3s linear
+    
+    &--mobile.enter
+        visibility: visible
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        -webkit-transition: -webkit-transform .4s ease-out
+        transition: -webkit-transform .4s ease-out
+        transition: transform .4s ease-out
+        transition: transform .4s ease-out,-webkit-transform .4s ease-out
+
+
